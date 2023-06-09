@@ -1,8 +1,8 @@
-package com.login.global.filter;
+package com.login.global.jwt.filter;
 
 import com.login.domain.user.User;
 import com.login.domain.user.repository.UserRepository;
-import com.login.global.service.JwtService;
+import com.login.global.jwt.service.JwtService;
 import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

@@ -1,4 +1,4 @@
-package com.login.global.service;
+package com.login.global.jwt.service;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
