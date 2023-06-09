@@ -21,7 +21,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 @RequiredArgsConstructor
 @Slf4j
-public class JwtAutenticationProcessingFilter extends OncePerRequestFilter{
+public class JwtAuthenticationProcessingFilter extends OncePerRequestFilter{
 
     private static final String NO_CHECK_URL = "/login"; // "/login"으로 들어오는 요청은 Filter 작동 X
 
@@ -127,7 +127,7 @@ public class JwtAutenticationProcessingFilter extends OncePerRequestFilter{
     public void saveAuthentication(User myUser) {
         String password = myUser.getPassword();
         if (password == null) { // 소셜 로그인 유저의 비밀번호 임의로 설정 하여 소셜 로그인 유저도 인증 되도록 설정
-            password = PasswordUtil.generateRandomPassword();
+            password = login.oauthtest4.global.jwt.util.PasswordUtil.generateRandomPassword();
         }
 
         UserDetails userDetailsUser = org.springframework.security.core.userdetails.User.builder()
